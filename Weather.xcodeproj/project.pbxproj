@@ -19,6 +19,7 @@
 		E90A584F2AED7662004F4C84 /* WeatherUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A584E2AED7662004F4C84 /* WeatherUITestsLaunchTests.swift */; };
 		E90A58622AED7A4D004F4C84 /* CityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A58612AED7A4D004F4C84 /* CityViewController.swift */; };
 		E90A58642AED7A6D004F4C84 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90A58632AED7A6D004F4C84 /* TabViewController.swift */; };
+		E95610142AEE879A00A8160F /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95610132AEE879A00A8160F /* LocationViewModel.swift */; };
 		E9B58E9C2AED8808004D39DF /* WeatherDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B58E9B2AED8808004D39DF /* WeatherDetail.swift */; };
 		E9B58E9F2AED9AFF004D39DF /* LocationWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B58E9E2AED9AFF004D39DF /* LocationWeatherView.swift */; };
 		FF9978BD81F52D3508E067AB /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76BA27334CF5B9C461CCC53 /* Pods_Weather.framework */; };
@@ -64,6 +65,7 @@
 		E90A584E2AED7662004F4C84 /* WeatherUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E90A58612AED7A4D004F4C84 /* CityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityViewController.swift; sourceTree = "<group>"; };
 		E90A58632AED7A6D004F4C84 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		E95610132AEE879A00A8160F /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
 		E9B58E9B2AED8808004D39DF /* WeatherDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetail.swift; sourceTree = "<group>"; };
 		E9B58E9E2AED9AFF004D39DF /* LocationWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWeatherView.swift; sourceTree = "<group>"; };
 		F76BA27334CF5B9C461CCC53 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				E9B58E9B2AED8808004D39DF /* WeatherDetail.swift */,
+				E95610132AEE879A00A8160F /* LocationViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				E9B58E9C2AED8808004D39DF /* WeatherDetail.swift in Sources */,
 				E90A58642AED7A6D004F4C84 /* TabViewController.swift in Sources */,
 				E90A58622AED7A4D004F4C84 /* CityViewController.swift in Sources */,
+				E95610142AEE879A00A8160F /* LocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,11 +661,11 @@
 				DEVELOPMENT_TEAM = 36R3TYQTT7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weather/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нам нужно ваше местоположение";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нужно разрешение";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -686,11 +690,11 @@
 				DEVELOPMENT_TEAM = 36R3TYQTT7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Weather/Info.plist;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нам нужно ваше местоположение";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Нужно разрешение";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

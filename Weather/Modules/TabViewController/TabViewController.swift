@@ -15,6 +15,10 @@ final class TabViewController: UITabBarController {
     }
     
     private func setupTab() {
+	   
+	   tabBar.barStyle = .black
+	   tabBar.barTintColor = .gray
+	   
 	   let tabLocation = LocationViewController()
 	   tabLocation.title = "Ваша текущая позиция"
 	   let tabCity = CityViewController()
