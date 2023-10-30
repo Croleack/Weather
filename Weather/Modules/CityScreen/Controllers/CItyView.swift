@@ -7,21 +7,22 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 class CityView: UIView {
     //MARK: - Variables
     
-    private let cityTextField: UITextField = {
+    let cityTextField: UITextField = {
 	   let textField = UITextField()
 	   textField.isEnabled = true
-	   textField.placeholder = "Введите город"
-	   textField.textColor = UIColor.lightGray
+	   textField.placeholder = "Введите город на английском языке"
+	   textField.textColor = UIColor.white
 	   textField.becomeFirstResponder()
 	   textField.translatesAutoresizingMaskIntoConstraints = false
 	   return textField
     }()
     
-    private let temperatureLabel: UILabel = {
+    let temperatureLabel: UILabel = {
 	   let label = UILabel()
 	   label.translatesAutoresizingMaskIntoConstraints = false
 	   return label
@@ -63,15 +64,28 @@ class CityView: UIView {
 	   }
     }
 }
-
+// MARK: - extension
+extension UITextField {
+    var textPublisher: AnyPublisher<String, Never> {
+	   NotificationCenter.default
+		  .publisher(for: UITextField.textDidChangeNotification, object: self)
+		  .compactMap { $0.object as? UITextField } 
+		  .map { $0.text ?? "" }
+		  .eraseToAnyPublisher()
+    }
+}
 // MARK: - Constants
 
 fileprivate extension CityView {
     
     enum Constants {
-	   static let cityTextLeftSnp = 50
+	   static let cityTextLeftSnp = 40
 	   static let cityTextTopSnp = 100
-	   static let temperatureLabelLeftSnp = 50
+	   static let temperatureLabelLeftSnp = 40
 	   static let temperatureLabelTopSnp = 40
     }
 }
+
+
+
+

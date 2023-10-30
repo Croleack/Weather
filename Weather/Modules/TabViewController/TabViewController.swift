@@ -20,7 +20,7 @@ final class TabViewController: UITabBarController {
 	   tabBar.barTintColor = .gray
 	   
 	   let tabLocation = LocationViewController()
-	   tabLocation.title = "Ваша текущая позиция"
+	   tabLocation.title = "Погода за окном"
 	   let tabCity = CityViewController()
 	   tabCity.title = "Температура по городам"
 	   

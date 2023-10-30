@@ -88,15 +88,15 @@ fileprivate extension LocationWeatherView {
     
     enum Constants {
 	   static let fontCityLabel = 30.0
-	   static let cityLabelLeftSnp = 50
+	   static let cityLabelLeftSnp = 40
 	   static let cityLabelTopSnp = 100
-	   static let temperatureLabelLeftSnp = 50
+	   static let temperatureLabelLeftSnp = 40
 	   static let temperatureLabelTopSnp = 40
-	   static let weatherImageViewLeftSnp = 50
+	   static let weatherImageViewLeftSnp = 40
 	   static let weatherImageViewTopSnp = 60
 	   static let weatherImageViewWidth = 60
 	   static let weatherImageViewHeight = 100
-	   static let descriptionLabelLeftSnp = 50
+	   static let descriptionLabelLeftSnp = 40
 	   static let descriptionLabelTopSnp = 30
     }
 }
