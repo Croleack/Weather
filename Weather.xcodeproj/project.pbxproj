@@ -199,6 +199,7 @@
 		E90A585D2AED793C004F4C84 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E92CC5B42AF108DA00A3F803 /* Models */,
 				E9FD09622AEED5D5006B3E52 /* API */,
 				E90A58602AED7A2E004F4C84 /* LocationScreen */,
 				E90A585F2AED79FC004F4C84 /* CityScreen */,
@@ -233,10 +234,17 @@
 			path = LocationScreen;
 			sourceTree = "<group>";
 		};
-		E9B58E9A2AED87ED004D39DF /* Models */ = {
+		E92CC5B42AF108DA00A3F803 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E9B58E9B2AED8808004D39DF /* WeatherDetail.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E9B58E9A2AED87ED004D39DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				E9FD09602AEED4F2006B3E52 /* LocationViewModel.swift */,
 			);
 			path = Models;

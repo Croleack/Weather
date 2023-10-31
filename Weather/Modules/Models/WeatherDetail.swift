@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - WeatherDetail
-struct WeatherDetail: Codable, Identifiable  {
+struct WeatherDetail: Codable {
     let coord: Coord?
     let weather: [Weather]?
     let base: String?

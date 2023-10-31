@@ -9,14 +9,14 @@ import UIKit
 import SnapKit
 import Combine
 
-class CityView: UIView {
+final class CityView: UIView {
     //MARK: - Variables
     
     let cityTextField: UITextField = {
 	   let textField = UITextField()
 	   textField.isEnabled = true
 	   textField.placeholder = "Введите город на английском языке"
-	   textField.textColor = UIColor.white
+	   textField.textColor = UIColor.black
 	   textField.becomeFirstResponder()
 	   textField.translatesAutoresizingMaskIntoConstraints = false
 	   return textField
@@ -46,7 +46,7 @@ class CityView: UIView {
     }
     //MARK: - functions
     
-    func setupUI() {
+    private func setupUI() {
 	   addSubview(backgroundImageView)
 	   addSubview(cityTextField)
 	   addSubview(temperatureLabel)

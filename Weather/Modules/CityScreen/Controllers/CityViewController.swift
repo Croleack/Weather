@@ -7,8 +7,9 @@
 
 import UIKit
 import Combine
+import SnapKit
 
-class CityViewController: UIViewController {
+final class CityViewController: UIViewController {
     //MARK: - Variables
     var cityView = CityView()
     private let viewModel = CityViewModel()
@@ -22,8 +23,8 @@ class CityViewController: UIViewController {
 	   tapGesture()
     }
     
-    // MARK: - Combine
-    func binding() {
+    // MARK: - functions
+    private func binding() {
 	   cityView.cityTextField.textPublisher
 		  .assign(to: \.city, on: viewModel)
 		  .store(in: &cancellable)
@@ -33,7 +34,6 @@ class CityViewController: UIViewController {
 			 self?.cityView.temperatureLabel.text = temp})
 		  .store(in: &cancellable)
     }
-    //MARK: - functions
     
     private func setupCityView() {
 	   cityView = CityView()
@@ -45,14 +45,14 @@ class CityViewController: UIViewController {
 	   }
     }
     
-    func tapGesture() {
+    private func tapGesture() {
 	   let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
 	   tapGesture.numberOfTapsRequired = 1
 	   view.addGestureRecognizer(tapGesture)
     }
     
     @objc
-    func hideKeyboard() {
+    private func hideKeyboard() {
 	   view.endEditing(true)
     }
 }

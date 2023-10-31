@@ -9,7 +9,7 @@ import UIKit
 import CoreLocation
 import Combine
 
-class LocationViewController: UIViewController {
+final class LocationViewController: UIViewController {
     //MARK: - Variables
     private var viewModel = LocationViewModel()
     

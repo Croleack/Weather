@@ -10,7 +10,7 @@ import SnapKit
 import MapKit
 import CoreLocation
 
-class LocationWeatherView: UIView {
+final class LocationWeatherView: UIView {
     //MARK: - Variables
     private let backgroundImageView: UIImageView = {
 	   let imageView = UIImageView(image: UIImage(named: "back_weather"))

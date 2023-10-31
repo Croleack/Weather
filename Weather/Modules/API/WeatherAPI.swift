@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class WeatherAPI {
+final class WeatherAPI {
     
     static let shared = WeatherAPI()
     //MARK: - fetchWeather(Location 

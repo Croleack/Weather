@@ -9,7 +9,7 @@ import Combine
 import CoreLocation
 import UIKit
 
-class LocationViewModel: NSObject, CLLocationManagerDelegate {
+final class LocationViewModel: NSObject, CLLocationManagerDelegate {
     //MARK: - Variables
     private let locationManager = CLLocationManager()
     var weatherDetail = WeatherDetail.placeholder

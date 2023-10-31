@@ -8,14 +8,14 @@
 import Combine
 import Foundation
 
-final class CityViewModel: ObservableObject {
+final class CityViewModel {
 
     @Published var city: String = ""
     @Published var temp = " "
     
     init() {
 	   $city
-		  .debounce(for: 0.3, scheduler: RunLoop.main)
+		  .debounce(for: 0.5, scheduler: RunLoop.main)
 		  .removeDuplicates()
 		  .flatMap { (city:String) -> AnyPublisher <WeatherDetail, Never> in
 			 WeatherAPI.shared.fetchWeatherCity(for: city)
